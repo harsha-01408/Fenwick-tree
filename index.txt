@@ -1,0 +1,41 @@
+Question
+
+The current selected programming language is CPP. We emphasize the submission of a fully
+working code over partially correct but efficient code. Once submitted, you cannot review this
+problem again. You can use cout to debug your code. The cout may not work in case of
+syntax/runtime error. The version of GCC being used is 5.5.0.
+
+A software company receives a request to update an application as per the latest requirements.
+The application contains data for N years identified as 0 to N-1. As per the latest requirements,
+the analyst working on the update must analyse the data which is in strictly ascending order.
+This means that no two numbers can be the same in the data. The application must remove the
+data of groups of consecutive years such that the data of remaining years will be in strictly
+ascending order. Only one group can be removed. The analyst must find the number of groups
+that could be removed to fulfil the received requirement.
+
+Write an algorithm to find the number of groups that could be removed to fulfil the received
+requirement.
+
+Input
+
+The first line of the input consists of an integer – yearData_Size, representing the number of
+years for which data is displayed in the application (N).
+The second line consists of N space-separated integers representing the displayed data of years.
+
+Output
+
+Print an integer representing the number of groups that could be removed to fulfil the received
+requirement.
+
+Example
+
+Input
+5
+9 7 5 4 12
+
+Output
+4
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
