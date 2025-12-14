@@ -39,3 +39,55 @@ Output
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+D - Match, Mod, Minimize 2
+Time Limit: 2 sec / Memory Limit: 1024 MiB
+Score: 400 points
+
+Problem Statement
+You are given length-N sequences A=(A1,A2,...,AN) and B=(B1,B2,...,BN) consisting of non-negative integers, and a positive integer M.
+
+When you can freely rearrange the elements of A, find the minimum possible value of:
+  sum_{i=1..N} ((Ai + Bi) mod M).
+
+T test cases are given, so find the answer for each of them.
+
+Constraints
+1 <= T <= 1e5
+1 <= N <= 3e5
+1 <= M <= 1e9
+0 <= Ai, Bi < M
+Sum of N over all test cases <= 3e5
+All input values are integers.
+
+Input
+T
+For each test case:
+  N M
+  A1 A2 ... AN
+  B1 B2 ... BN
+
+Output
+For each test case, output the minimum possible value of:
+  sum_{i=1..N} ((Ai + Bi) mod M)
+
+Sample Input
+3
+3 6
+3 1 4
+2 0 1
+1 1000000000
+999999999
+999999999
+10 201
+144 150 176 154 110 187 38 136 111 46
+96 109 73 63 85 1 156 7 13 171
+
+Sample Output
+5
+999999998
+619
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
