@@ -103,3 +103,32 @@ Otherwise, output -1 for that i.
 Return the resulting array of n integers.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+1. Rightmost Smaller Element Distance
+
+You are given an integer array nums of length n.
+
+For each index i, find the largest index j such that:
+- j > i
+- nums[j] < nums[i]
+
+If such an index exists, set answer[i] = j - i.
+Otherwise, set answer[i] = 0.
+
+Return the array answer.
+
+Example 1:
+Input: nums = [8,2,5,3]
+Output: [3,0,1,0]
+
+Explanation:
+- For i = 0, nums[0] = 8. The rightmost index j > 0 with nums[j] < 8 is j = 3, so answer[0] = 3.
+- For i = 1, nums[1] = 2. There is no index j > 1 with nums[j] < 2, so answer[1] = 0.
+- For i = 2, nums[2] = 5. The rightmost index j > 2 with nums[j] < 5 is j = 3, so answer[2] = 1.
+- For i = 3, there is no index to the right, so answer[3] = 0.
+
+Constraints:
+- 1 <= n <= 10^5
+- -10^9 <= nums[i] <= 10^9
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
