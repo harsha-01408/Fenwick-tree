@@ -132,3 +132,48 @@ Constraints:
 - -10^9 <= nums[i] <= 10^9
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Security Breaching
+
+You are given two integer arrays, layers and energy, each of length n, and an integer k.
+
+An attacker may start at any level i (0 <= i < n) with initial energy k and then move only to the right through levels i, i + 1, ..., n - 1.
+
+For each level j:
+1. The attacker must spend layers[j] energy to breach that level.
+2. If the attacker does not have enough energy to pay this cost, the attack stops immediately.
+3. After breaching level j, if the remaining energy is at least energy[j], the attacker earns 1 point.
+
+For every starting index i, determine the maximum number of points the attacker can collect by starting at level i.
+
+Return an integer array answer of length n where answer[i] is the number of points obtained when starting from level i.
+
+Example 1:
+Input: layers = [5, 8, 1], energy = [4, 2, 1], k = 10
+Output: [1, 2, 1]
+
+Explanation:
+- Start at level 0:
+  Spend 5, remaining energy = 5.
+  Since 5 >= 4, gain 1 point.
+  Next level needs 8 energy, which is not possible, so stop.
+  Result = 1
+
+- Start at level 1:
+  Spend 8, remaining energy = 2.
+  Since 2 >= 2, gain 1 point.
+  Move to level 2: spend 1, remaining energy = 1.
+  Since 1 >= 1, gain 1 point.
+  Result = 2
+
+- Start at level 2:
+  Spend 1, remaining energy = 9.
+  Since 9 >= 1, gain 1 point.
+  Result = 1
+
+Constraints:
+- 1 <= n <= 10^5
+- 1 <= layers[i], energy[i] <= 10^9
+- 1 <= k <= 10^15
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
