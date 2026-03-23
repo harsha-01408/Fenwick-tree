@@ -177,3 +177,50 @@ Constraints:
 - 1 <= k <= 10^15
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You are given a list of retailer locations on a 2D grid.
+
+The i-th retailer is located at coordinates (x_i, y_i). That retailer can deliver to every city inside or on the boundary of the axis-aligned rectangle with corners:
+(0, 0), (x_i, 0), (0, y_i), and (x_i, y_i).
+
+In other words, a retailer at (x_i, y_i) can deliver to a city (a, b) if:
+0 <= a <= x_i and 0 <= b <= y_i.
+
+You are also given a list of requests, where each request[j] = [a_j, b_j] represents a city.
+
+For each request, return the number of retailers that can deliver to that city.
+
+Note:
+- No two retailers are located at the same city.
+
+Example 1:
+Input:
+retailers = [[1,2], [2,3], [1,1]]
+requests = [[1,1], [1,4]]
+
+Output:
+[3,0]
+
+Explanation:
+- For request [1,1]:
+  All three retailers can deliver to (1,1).
+- For request [1,4]:
+  No retailer has y >= 4, so no one can deliver there.
+
+Example 2:
+Input:
+retailers = [[3,3], [5,2], [2,5]]
+requests = [[2,2], [4,2], [3,4]]
+
+Output:
+[3,1,0]
+
+Explanation:
+- [2,2] is covered by all 3 retailers.
+- [4,2] is covered only by retailer [5,2].
+- [3,4] is not covered by any retailer.
+
+Function signature:
+vector<int> countRetailers(vector<vector<int>>& retailers, vector<vector<int>>& requests);
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
